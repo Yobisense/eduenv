@@ -5,6 +5,7 @@ An open source data model for modelling the education environment.
 ## Entities
 
 ### Course
+Serves as a course definition and is used as the primary container for all resources belonging to the course. A course is defined and administered by an instructor.
 
 | Attribute | Description |
 | --- | --- |
@@ -14,12 +15,22 @@ An open source data model for modelling the education environment.
 | Course Objectives | A set of course objectives for completing the course. |
 | Minimum Success Score | The minimum accumulated score required  from course objectives in order to pass. |
 
-### Course Instance
+### Course Enrollment
+Serves as a place holder to indicate which course intance a student has enrolled with.
 
 | Attribute | Description |
 | --- | --- |
+| ID | An unique identifier for distinguishing between different course enrollments within the system. |
+| Course Instance | The course instance that this enrollment belongs to. |
+| Student | The student that this enrollment is owned by. |
+
+
+### Course Instance
+Serves as one cycle of a course. Essentially contains all dynamic attributes between instances of a course such as students,  
+| Attribute | Description |
+| --- | --- |
 | ID | An unique identifier for distinguishing between different  objectives within the system. |
-| Student | The student role that this course instance belongs to. |
+| Enrollments | The course enrollments that belong to this course instance. |
 | Course | The course that this course instance belongs to. |
 | Succeeded | A flag indicating whether the student succeeded within the course. |
 | Start date | The date that this course instance started. |
@@ -28,6 +39,7 @@ An open source data model for modelling the education environment.
 | Termination reason | The reason for terminating this course instance. |
 
 ### Course Objective
+Serves as a definiton of a particular task or activity required to be completed within the course.
 
 | Attribute | Description |
 | --- | --- |
@@ -39,11 +51,13 @@ An open source data model for modelling the education environment.
 | Success Required | A flag indicating whether this course objective is required to be succeeded in order to pass |
 
 ### Course Objective Instance
+An instance of a course objective contains the variable attributes of it course objective such as score and which course enrollment the course belongs to.
 
 | Attribute | Description |
 | --- | --- |
 | ID | An unique identifier for distinguishing between different course objective instances within the system.|
 | Student | The student to which this course objective instance belongs. |
+| Course Enrollment | The course enrollment which this course objective instance belongs to. |
 | Course Objective | The course objective which this course objective instance represents. |
 | Score | The score achieved by the student for the course objective. |
 
