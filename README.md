@@ -23,6 +23,11 @@ Serves as a place holder to indicate which course intance a student has enrolled
 | ID | An unique identifier for distinguishing between different course enrollments within the system. |
 | Course Instance | The course instance that this enrollment belongs to. |
 | Student | The student that this enrollment is owned by. |
+| Start date | The date that this course instance started. |
+| End date | The date that this course instance ended. |
+| Terminated date | The date that this course instance was terminated in. |
+| Termination reason | The reason for terminating this course instance. |
+| Succeeded | A flag indicating whether the student succeeded within the course. |
 
 
 ### Course Instance
@@ -33,11 +38,6 @@ Serves as one cycle of a course. Essentially contains all dynamic attributes bet
 | ID | An unique identifier for distinguishing between different  objectives within the system. |
 | Enrollments | The course enrollments that belong to this course instance. |
 | Course | The course that this course instance belongs to. |
-| Succeeded | A flag indicating whether the student succeeded within the course. |
-| Start date | The date that this course instance started. |
-| End date | The date that this course instance ended. |
-| Terminated date | The date that this course instance was terminated in. |
-| Termination reason | The reason for terminating this course instance. |
 
 ### Course Objective
 Serves as a definiton of a particular task or activity required to be completed within the course.
