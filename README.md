@@ -26,7 +26,8 @@ Serves as a place holder to indicate which course intance a student has enrolled
 
 
 ### Course Instance
-Serves as one cycle of a course. Essentially contains all dynamic attributes between instances of a course such as students,  
+Serves as one cycle of a course. Essentially contains all dynamic attributes between instances of a course such as students. 
+
 | Attribute | Description |
 | --- | --- |
 | ID | An unique identifier for distinguishing between different  objectives within the system. |
