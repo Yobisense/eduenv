@@ -10,7 +10,7 @@ Serves as a course definition and is used as the primary container for all resou
 | Attribute | Description |
 | --- | --- |
 | ID | An unique identifier for distinguishing between different courses within the system. |
-| Coordinators | The Coordinator(s) of the course |
+| Coordinators | The Coordinator(s) of the course. |
 | Course Objectives | A set of course objectives for completing the course. |
 | Grade | Enumerator for distinguishing a Grade. |
 | Minimum Success Score | The minimum accumulated score required  from course objectives in order to pass. |
@@ -24,7 +24,9 @@ Serves as one cycle of a course. Essentially contains all dynamic attributes bet
 | --- | --- |
 | ID | An unique identifier for distinguishing between different  objectives within the system. |
 | Course | The course that this course instance belongs to. |
-| Instructor | The head instructor of this course instance |
+| Start Date | The date on which a course started. |
+| End Date | The date on which a course ended. |
+| Instructor | The head instructor of this course instance. |
 | Students | The students enrolled into this course instance. |
 
 ### Course Objective
@@ -117,12 +119,11 @@ A representation of a user’s role as a parent and their contribution of associ
 
 
 ### Student
-A representation of a user’s role and their contribution of association as a student enrollment of a specific grade within the system. A student will take up a set of courses matched to the student’s grade. Student’s will engage in the set of course objectives for each of their courses and be scored by them to distinguish success of the course.
+A representation of a user’s role and their contribution of association as a student enrollment to a course within the system. Student’s will engage in the set of course objectives for each of their courses and be scored by them to distinguish success of the course.
 
 | Attribute | Description |
 | --- | --- |
 | ID | An unique identifier for distinguishing between different students within the system. |
-| Grade | Enumerator for distinguishing different grades within the system. |
 | User | The user to which this student role belongs. |
 | Enrollment Start date | The date when the student was enrolled. |
 | Enrollment End date | The date when the student ended their enrollment. |
