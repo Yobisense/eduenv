@@ -24,10 +24,24 @@ Serves as one cycle of a course. Essentially contains all dynamic attributes bet
 | --- | --- |
 | ID | An unique identifier for distinguishing between different  objectives within the system. |
 | Course | The course that this course instance belongs to. |
-| Start Date | The date on which a course started. |
 | End Date | The date on which a course ended. |
 | Instructor | The head instructor of this course instance. |
-| Students | The students enrolled into this course instance. |
+| Start Date | The date on which a course started. |
+| Enrolments | The enrolments into this CourseInstance. |
+
+### Course Enrolment
+Facilitates the enrolment of a student into a Course's CourseInstance 
+
+| Attribute | Description |
+| --- | --- |
+| ID | An unique identifier for distinguishing between different  objectives within the system. |
+| Course Instance | A CourseInstance of the Course that this enrolment represents as is attending. |
+| End date | The date when this enrolment ended. |
+| Enrollment succeeded | A flag indicating whether the enrolment was succeeded by its Student. |
+| Start date | The date when this enrolment commenced. |
+| Student | The Student who was enrolled into the CourseInstance |
+| Succeeded | An indication of whether the student succeeded the Course. |
+| Termination Reason | A reason for having terminated this enrolment prematurely |
 
 ### Course Objective
 Serves as a definiton of a particular task or activity required to be completed within the course.
@@ -125,9 +139,7 @@ A representation of a user’s role and their contribution of association as a s
 | --- | --- |
 | ID | An unique identifier for distinguishing between different students within the system. |
 | User | The user to which this student role belongs. |
-| Enrollment Start date | The date when the student was enrolled. |
-| Enrollment End date | The date when the student ended their enrollment. |
-| Enrollment succeeded | A flag indicating whether the student succeeded the duration of enrollment. |
+| Enrolments | All course enrolments for this students |
 
 ### Temporary Instructor
 A representation of a user’s as a temporary instructor and their contribution of association within the system. Temporary Instructors fill in on behalf of Instructors for particular Course Objectives.
