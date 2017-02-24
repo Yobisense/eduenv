@@ -11,7 +11,8 @@ Serves as a course definition and is used as the primary container for all resou
 | --- | --- |
 | ID | An unique identifier for distinguishing between different courses within the system. |
 | Coordinators | The Coordinator(s) of the course. |
-| Course Objectives | A set of course objectives for completing the course. |
+| Objectives | A set of course objectives for completing the course. |
+| Instnaces | A set of course instances instantiated from this Course | 
 | Grade | Enumerator for distinguishing a Grade. |
 | Minimum Success Score | The minimum accumulated score required  from course objectives in order to pass. |
 | Name | A unique course name. |
@@ -37,7 +38,6 @@ Facilitates the enrolment of a student into a Course's CourseInstance
 | ID | An unique identifier for distinguishing between different  objectives within the system. |
 | Course Instance | A CourseInstance of the Course that this enrolment represents as is attending. |
 | End date | The date when this enrolment ended. |
-| Enrollment succeeded | A flag indicating whether the enrolment was succeeded by its Student. |
 | Start date | The date when this enrolment commenced. |
 | Student | The Student who was enrolled into the CourseInstance |
 | Succeeded | An indication of whether the student succeeded the Course. |
@@ -102,6 +102,9 @@ A representation of a user’s role as an administrator and their contribution o
 | --- | --- |
 | ID | An unique identifier for distinguishing between different administrators within the system. |
 | User | The user to which this administrator role belongs. |
+| End Date | The day on which this Administrator was uninstituted |
+| End Date | The day on which this Administrator was uninstituted |
+
 
 ### Coordinator
 A representation of a user’s role as a Coordinator and their contribution of association within the system. Coordinators will be responsible for the creation and management of new Courses within the system. 
@@ -110,7 +113,10 @@ A representation of a user’s role as a Coordinator and their contribution of a
 | --- | --- |
 | ID | An unique identifier for distinguishing between different administrators within the system. |
 | Course | The course which this coordinator contributes to. |
+| End Date | The day on which this Coordinator was uninstituted.|
 | User | The user to which this administrator role belongs. |
+| Start Date | The day on which this Coordinator was instituted. |
+
 
 ### Instructor
 A representation of a user as an instructor and their contribution of association within the system. Instructors will be responsible for teaching a course, distributing and scoring the set of course objectives for each course. Instructors do not actively influence the success of a student within the course, however instructors use their discretion to determine the score achieved by a student for each objective within the course - this may be guided by a score criteria.
@@ -118,8 +124,9 @@ A representation of a user as an instructor and their contribution of associatio
 | Attribute | Description |
 | --- | --- |
 | ID | An unique identifier for distinguishing between different instructors within the system. |
-| Administered courses | All courses that were created/administered by this instructor. |
-| Course Instances | Course instances that is taught by this instructor. |
+| End Date | The day on which this Instructor was uninstituted. |
+| Course Instance | Course instance that was instructed by this instructor. |
+| Start Date | The day on which this Instructor was instituted. |
 | User | The user to which this instructor role belongs. | 
 
 ### Parent
@@ -128,18 +135,24 @@ A representation of a user’s role as a parent and their contribution of associ
 | Attribute | Description |
 | --- | --- |
 | ID | An unique identifier for distinguishing between different parents within the system. |
-| Children | A set of users that are children of this parent. |
+| Child | A user that is a child of the parent. |
+| End Date | The day on which this Parent was instituted. |
+| Start Date | The day on which this Parent was instituted. |
 | User | The user to which this parent role belongs. |
+
+
 
 
 ### Student
 A representation of a user’s role and their contribution of association as a student enrollment to a course within the system. Student’s will engage in the set of course objectives for each of their courses and be scored by them to distinguish success of the course.
 
 | Attribute | Description |
-| --- | --- |
+| --- | --- | --- |
 | ID | An unique identifier for distinguishing between different students within the system. |
+| End Date | The date this student ended - usually the last day of admission. |
+| Enrolments | All course enrolments for this students. |
+| Start Date| The date this student started - usually the admission date. |
 | User | The user to which this student role belongs. |
-| Enrolments | All course enrolments for this students |
 
 ### Temporary Instructor
 A representation of a user’s as a temporary instructor and their contribution of association within the system. Temporary Instructors fill in on behalf of Instructors for particular Course Objectives.
@@ -147,6 +160,8 @@ A representation of a user’s as a temporary instructor and their contribution 
 | Attribute | Description |
 | --- | --- |
 | ID | An unique identifier for distinguishing between different instructors within the system. |
-| Course Objective Instances | Course instances that is taught by this instructor. |
+| Course Objective Instances | Course instances that are taught by this tempory instructor. |
+| End Date | The day on which this temporary instructor was uninstituted. |
+| Start Date | The day on which this temporary instructor was instituted. |
 | User | The user to which this instructor role belongs. | 
 

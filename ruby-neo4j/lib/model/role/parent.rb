@@ -1,5 +1,5 @@
 module Eduenv
   class Parent < AbstractRole
-    has_many :out, :children, type: :HAS_CHILD
+    has_one :out, :child, type: :HAS_CHILD
   end
 end
