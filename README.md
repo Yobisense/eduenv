@@ -1,4 +1,4 @@
-# eduenv
+# Eduenv - Alpha
 An open source data model for modelling the education environment.
 
 # Domain

@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name        = 'eduenv'
-  s.version     = '0.0.1'
-  s.date        = '2017-02-01'
+  s.version     = '0.0.2'
+  s.date        = '2017-05-15'
   s.summary     = "Ruby implemntation of the yobisense eduevn standard."
   s.description = "Ruby implementation of the yobisene eduenv standard."
   s.authors     = ["Tjad Clark"]
