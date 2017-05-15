@@ -2,10 +2,16 @@ require 'neo4j'
 
 #entities
 require File.expand_path('../model/abstract_entity.rb', __FILE__)
+require File.expand_path('../model/admission.rb', __FILE__)
+require File.expand_path('../model/campus.rb', __FILE__)
 require File.expand_path('../model/course', __FILE__)
+require File.expand_path('../model/course_criteria_set', __FILE__)
+require File.expand_path('../model/course_enrolment', __FILE__)
 require File.expand_path('../model/course_instance', __FILE__)
 require File.expand_path('../model/course_objective', __FILE__)
-require File.expand_path('../model/course_objective_instance', __FILE__)
+require File.expand_path('../model/course_objective_criterion', __FILE__)
+require File.expand_path('../model/course_objective_evaluation', __FILE__)
+require File.expand_path('../model/institution', __FILE__)
 require File.expand_path('../model/profile', __FILE__)
 require File.expand_path('../model/user', __FILE__)
 
