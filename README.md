@@ -5,7 +5,7 @@ An open source data model for modelling the education environment.
 ## Entities
 
 ### Admission
-A representation of a student's terms of admission
+A representation of a student's terms of admission to a campus
 
 | Attribute | Description |
 | --- | --- |
@@ -121,7 +121,9 @@ A container for storing personal details about a particular user within the syst
 | DOB | Date of birth of the person. |
 | Email Address | The primary email address of the person. |
 | Firstname | Firstname of the person. |
+| Gender | Gender of the person. |
 | Lastname | Lastname of the person. |
+| Title | Title of the person |
 
 ### User
 A handle for each person within the educational organisation. Each user will have a set of roles associated with them to represent the various responsibilities within the organisation.

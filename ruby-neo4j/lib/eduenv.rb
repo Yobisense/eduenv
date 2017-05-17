@@ -1,7 +1,10 @@
 require 'neo4j'
 
-#entities
+
 require File.expand_path('../model/abstract_entity.rb', __FILE__)
+require File.expand_path('../model/role/abstract_role', __FILE__)
+
+#entities
 require File.expand_path('../model/admission.rb', __FILE__)
 require File.expand_path('../model/campus.rb', __FILE__)
 require File.expand_path('../model/course', __FILE__)
@@ -16,7 +19,6 @@ require File.expand_path('../model/profile', __FILE__)
 require File.expand_path('../model/user', __FILE__)
 
 #roles
-require File.expand_path('../model/role/abstract_role', __FILE__)
 require File.expand_path('../model/role/administrator', __FILE__)
 require File.expand_path('../model/role/coordinator', __FILE__)
 require File.expand_path('../model/role/instructor', __FILE__)

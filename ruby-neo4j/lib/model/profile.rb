@@ -6,5 +6,7 @@ module Eduenv
     property :email_address
     property :contact_number
     property :address
+    property :gender
+    property :title
   end
 end
