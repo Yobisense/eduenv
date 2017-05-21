@@ -22,6 +22,7 @@ A representation of an Institution's Campus
 | Admissions | All admissions granted by this institution. |
 | Name | A unique course name. |
 | Institution | The institution to which this campus belongs. |
+| Course instances | All course instances hosted by this campus |
 
 ### Course
 Serves as a course definition and is used as the primary container for all resources belonging to the course. A course is defined and administered by an instructor.

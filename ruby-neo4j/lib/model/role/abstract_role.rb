@@ -4,6 +4,7 @@ module Eduenv
   class AbstractRole < AbstractEntity
     property :start_date
     property :end_date
+    property :role_type
 
     has_one :in, :user, type: :HAS_ROLE, model_class: :'::Eduenv::User'
   end
