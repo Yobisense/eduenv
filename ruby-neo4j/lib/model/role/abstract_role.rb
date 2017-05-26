@@ -7,5 +7,10 @@ module Eduenv
     property :role_type
 
     has_one :in, :user, type: :HAS_ROLE, model_class: :'::Eduenv::User'
+
+    def initialize *args
+      super(*args)
+      self.role_type= self.class.name
+    end
   end
 end
